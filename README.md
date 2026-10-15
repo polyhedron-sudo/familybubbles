@@ -9,3 +9,7 @@ Family data is stored in the browser's IndexedDB database, which supports much l
 Use **Export Family** to create a portable `.json` backup containing people, relationships, biographies, dates, notes, and embedded image data. Use **Import Family** to restore that backup. Keep exported JSON files somewhere safe; browser storage is local to the browser and device.
 
 The on-screen view focuses on one person and displays relatives within three relationship steps. The underlying data can contain more people and relationships.
+
+
+## Version 13 iteration
+Based on the minimal portraits version. The only functional styling change is that every relationship line uses the same dotted style; the portrait styling and other app features are preserved.
