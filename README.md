@@ -10,5 +10,8 @@ Use **Export Family** to create a portable `.json` backup containing people, rel
 
 The on-screen view focuses on one person and displays relatives within three relationship steps. The underlying data can contain more people and relationships.
 
-
-Version 17 update: corrected family-bubble portrait rendering. Portrait images are clipped to a circle, and the circular border is transparent in the middle so it cannot cover the photo. This iteration uses Family-Bubbles-fixed-v11 as its starting foundation.
+## Portrait geometry update (v19)
+- Portrait images are clipped to a circle matching each bubble's radius.
+- The clickable/drag target is circular and matches the visible bubble rather than the square image bounds.
+- Dropping a photo creates a relationship only when the drop point is inside a person's circular bubble.
+- Double-clicking a person focuses the bubble and leaves that person's details panel open.
