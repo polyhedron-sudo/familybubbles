@@ -15,3 +15,5 @@
 .person-node .portrait-image{pointer-events:none;clip-path:circle(50% at 50% 50%)}
 .person-node .portrait-hit-area{pointer-events:all;cursor:pointer}
 .person-node .portrait-ring{pointer-events:none}
+/* Relationship controls fade with the currently focused person. */
+.relationship-zone{transition:opacity .18s ease}
