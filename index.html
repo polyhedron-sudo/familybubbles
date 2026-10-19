@@ -12,7 +12,13 @@
 <button id="createLinkBtn" type="button">Create Relationship Link</button>
 <div id="currentLinks" class="current-links"></div>
 </section>
-<div class="panel-actions"><button id="savePersonBtn">Save Changes</button><button id="deletePersonBtn" class="danger">Delete Person</button></div></aside></main>
+<div class="panel-actions"><button id="createPersonBtn" class="create-person" type="button" aria-expanded="false" aria-controls="createPersonForm">Create Person</button>
+<div id="createPersonForm" class="create-person-form" hidden>
+<label>New person's name<input id="newPersonName" type="text" placeholder="Full name"></label>
+<label>Relationship to the person in this panel<select id="newPersonRelationship"><option value="parent">Parent</option><option value="spouse">Partner</option><option value="child">Child</option><option value="sibling">Sibling</option><option value="none">No relationship yet</option></select></label>
+<button id="confirmCreatePersonBtn" class="create-person" type="button">Add Person</button>
+<button id="cancelCreatePersonBtn" class="secondary" type="button">Cancel</button>
+</div><button id="savePersonBtn">Save Changes</button><button id="deletePersonBtn" class="danger">Delete Person</button></div></aside></main>
 <div id="relationshipModal" class="modal-backdrop" hidden><div class="modal"><h2>How are they related?</h2><p id="relationshipPrompt">Choose a relationship.</p><div class="relationship-buttons"><button data-type="parent">Parent</button><button data-type="sibling">Sibling</button><button data-type="spouse">Spouse / partner</button><button data-type="child">Child</button></div><button id="cancelRelationshipBtn" class="secondary full-width">Cancel</button></div></div><div id="toast" class="toast" role="status"></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script><script src="js/app.js"></script>
 </body></html>

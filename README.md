@@ -1,4 +1,4 @@
-# Family Bubbles — v33
+# Family Bubbles — v34
 
 Family Bubbles is a plain HTML, CSS and JavaScript genealogy scrapbook, hosted as static files on GitHub Pages. D3.js is loaded from jsDelivr; an internet connection is needed unless D3 is provided locally.
 
@@ -15,6 +15,7 @@ Family Bubbles is a plain HTML, CSS and JavaScript genealogy scrapbook, hosted a
 ## Editing and relationships
 
 - The information panel edits a person's name, portrait, dates, biography and notes. Choose **Save Changes** to store edits.
+- **Create Person** (green, above Save Changes) opens an inline form to name a new person and optionally connect them as a parent, partner, child or sibling of the person shown in the panel. The new person appears as a bubble; existing positions are retained.
 - In **Relationship links**, choose another existing person and a relationship type to create a connection.
 - **Delete Person** removes that person and their relationships.
 - The app still includes photo drop handling; its behaviour is under review and is not the focus of this release.
@@ -25,4 +26,4 @@ Family information is stored in the browser's IndexedDB (with a localStorage fal
 
 ## Testing status
 
-v33 updates focus-by-ID, consistent bubble sizes, and documentation while retaining the v32 two-click information-panel behaviour. JavaScript syntax and archive integrity are checked; visual interaction still requires a browser test.
+v34 adds the Create Person panel action while retaining the working v33 navigation and sizing. JavaScript syntax and archive integrity are checked; visual interaction still requires a browser test.
