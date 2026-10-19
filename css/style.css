@@ -51,3 +51,27 @@ button.create-person:hover{background:#246638}
 
 #refreshViewBtn.refresh-view{display:block;width:100%;background:#2779c8;color:#fff;border:1px solid #1c61a7;border-radius:8px;padding:11px 14px;cursor:pointer;margin-top:8px}
 #refreshViewBtn.refresh-view:hover{background:#1c61a7}
+
+/* v36: accessible help control and independent instructions dialog. */
+.toolbar .help-button{background:#fffdf8;color:#2d2a26;border:1px solid #d9d0c1;font-weight:700;font-size:21px;min-width:42px;padding:7px 12px}
+.toolbar .help-button:hover{background:#eadfce}
+.help-backdrop{position:fixed;inset:0;background:rgba(45,42,38,.48);z-index:3000;display:flex;align-items:center;justify-content:center;padding:18px}
+.help-backdrop[hidden]{display:none!important}
+.help-dialog{position:relative;width:min(620px,100%);max-height:90dvh;overflow-y:auto;background:#fffdf8;color:#2d2a26;border-radius:16px;padding:26px 30px;box-shadow:0 14px 45px rgba(0,0,0,.22);line-height:1.5}
+.help-dialog h2{margin:0 38px 12px 0}.help-dialog ol{padding-left:24px}.help-dialog li{margin:0 0 12px}.help-dialog .help-warning{background:#f5f1e8;padding:12px;border-radius:8px}
+.help-dialog .help-close{position:absolute;top:12px;right:14px;background:transparent;color:#2d2a26;border:0;font-size:28px;padding:2px 10px}
+.help-dialog .help-close:hover{background:#eadfce}
+@media(max-width:760px){.help-dialog{padding:20px 22px;max-height:85dvh}.toolbar .help-button{flex:0 0 auto}}
+
+/* v37: supplemental photographs orbit each person without altering family links */
+.photo-satellite{cursor:zoom-in}.photo-satellite .satellite-frame{fill:#eee7da;pointer-events:none}
+.photo-satellite .satellite-image{clip-path:circle(50% at 50% 50%);pointer-events:none}
+.photo-satellite .satellite-outline{fill:transparent;stroke:#fffaf0;stroke-width:2.5;pointer-events:all;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2))}
+.photo-gallery-section{padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.photo-gallery-section h3{margin:0 0 5px}.photo-gallery-section p{font-size:13px;color:var(--muted);margin:0 0 10px}
+.photo-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.gallery-thumb{padding:0;aspect-ratio:1;border:2px solid var(--accent-light);border-radius:50%;overflow:hidden;background:var(--paper-dark)}
+.gallery-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-viewer:not([hidden]){position:fixed;inset:0;background:rgba(20,18,16,.86);z-index:100;display:flex;align-items:center;justify-content:center;padding:55px 20px}
+.photo-viewer[hidden]{display:none}.photo-viewer img{max-width:95%;max-height:95%;object-fit:contain}
+#closePhotoViewer{position:absolute;top:15px;right:20px;font-size:28px}

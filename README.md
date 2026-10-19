@@ -1,4 +1,4 @@
-# Family Bubbles — v34
+# Family Bubbles — v36
 
 Family Bubbles is a plain HTML, CSS and JavaScript genealogy scrapbook, hosted as static files on GitHub Pages. D3.js is loaded from jsDelivr; an internet connection is needed unless D3 is provided locally.
 
@@ -22,10 +22,18 @@ Family Bubbles is a plain HTML, CSS and JavaScript genealogy scrapbook, hosted a
 
 **Refresh View:** If a new portrait or relationship line does not appear immediately, click **↻ Refresh View** below Delete Person in the information panel. The page reloads to display saved changes. Save any unsaved edits first.
 
+## Help and reset
+
+Use the **?** button next to **Reset** in the top toolbar for the full instructions. The **Reset** button is the same function previously labeled “Reset Demo”: it restores the demo family after confirmation, replacing the current family stored in this browser. Export a backup first.
+
 ## Storage and backups
 
 Family information is stored in the browser's IndexedDB (with a localStorage fallback). Use **Export Family** to save a portable JSON backup containing people, relationships, notes and embedded images. Use **Import Family** to restore a backup. Browser storage is local to each browser/device, so export backups regularly.
 
 ## Testing status
 
-v35 adds the information-panel Refresh View button to v34; v34 adds the Create Person panel action while retaining the working v33 navigation and sizing. JavaScript syntax and archive integrity are checked; visual interaction still requires a browser test.
+v36 renames Reset Demo to Reset and adds an instructions panel. v35 adds the information-panel Refresh View button to v34; v34 adds the Create Person panel action while retaining the working v33 navigation and sizing. JavaScript syntax and archive integrity are checked; visual interaction still requires a browser test.
+
+
+## v37 — Additional photograph bubbles
+Open a person's panel and use **Add Photos** to attach one or more images without changing the original portrait. Up to eight additional images appear around the person's bubble at half its diameter. Every attached photograph is accessible from the thumbnail gallery in the side panel; select a thumbnail or satellite to enlarge it. Additional photos are embedded in JSON exports. This version does not merge JSON files or split the original portrait.
