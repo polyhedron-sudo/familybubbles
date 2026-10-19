@@ -17,3 +17,9 @@
 .person-node .portrait-ring{pointer-events:none}
 /* Relationship controls fade with the currently focused person. */
 .relationship-zone{transition:opacity .18s ease}
+
+/* v29: consistent relationship lines; no PPCS interface. */
+.family-link.spouse{stroke-dasharray:none}
+.relationship-zone{display:none!important}
+.side-panel:not(.open){visibility:hidden;pointer-events:none}
+.side-panel.open{visibility:visible;pointer-events:auto}
