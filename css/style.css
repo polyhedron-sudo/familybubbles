@@ -45,3 +45,9 @@ button.create-person:hover{background:#246638}
 .create-person-form[hidden]{display:none}
 .create-person-form label{margin:0}
 .create-person-form select{display:block;width:100%;margin-top:5px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);font:inherit}
+
+/* v35: quick access to refresh saved family graphics. */
+#refreshViewBtn{font-weight:bold;white-space:nowrap}
+
+#refreshViewBtn.refresh-view{display:block;width:100%;background:#2779c8;color:#fff;border:1px solid #1c61a7;border-radius:8px;padding:11px 14px;cursor:pointer;margin-top:8px}
+#refreshViewBtn.refresh-view:hover{background:#1c61a7}

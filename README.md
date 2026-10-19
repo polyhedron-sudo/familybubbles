@@ -20,10 +20,12 @@ Family Bubbles is a plain HTML, CSS and JavaScript genealogy scrapbook, hosted a
 - **Delete Person** removes that person and their relationships.
 - The app still includes photo drop handling; its behaviour is under review and is not the focus of this release.
 
+**Refresh View:** If a new portrait or relationship line does not appear immediately, click **↻ Refresh View** below Delete Person in the information panel. The page reloads to display saved changes. Save any unsaved edits first.
+
 ## Storage and backups
 
 Family information is stored in the browser's IndexedDB (with a localStorage fallback). Use **Export Family** to save a portable JSON backup containing people, relationships, notes and embedded images. Use **Import Family** to restore a backup. Browser storage is local to each browser/device, so export backups regularly.
 
 ## Testing status
 
-v34 adds the Create Person panel action while retaining the working v33 navigation and sizing. JavaScript syntax and archive integrity are checked; visual interaction still requires a browser test.
+v35 adds the information-panel Refresh View button to v34; v34 adds the Create Person panel action while retaining the working v33 navigation and sizing. JavaScript syntax and archive integrity are checked; visual interaction still requires a browser test.
