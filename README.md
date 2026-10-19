@@ -37,3 +37,7 @@ v36 renames Reset Demo to Reset and adds an instructions panel. v35 adds the inf
 
 ## v37 — Additional photograph bubbles
 Open a person's panel and use **Add Photos** to attach one or more images without changing the original portrait. Up to eight additional images appear around the person's bubble at half its diameter. Every attached photograph is accessible from the thumbnail gallery in the side panel; select a thumbnail or satellite to enlarge it. Additional photos are embedded in JSON exports. This version does not merge JSON files or split the original portrait.
+
+## v38 photo viewer
+
+New image uploads become the main portrait, with previous photographic portraits retained in the person’s album. The Photographs section at the bottom of the side panel is collapsed by default and contains thumbnails of the current portrait and all older photographs. Click a thumbnail or surrounding photo bubble for a full-screen viewer; use left/right buttons or arrow keys to browse and X or Escape to close. All embedded images remain in JSON exports.
