@@ -1,4 +1,4 @@
-# Family Bubbles — v36
+# Family Bubbles
 
 Family Bubbles is a plain HTML, CSS and JavaScript genealogy scrapbook, hosted as static files on GitHub Pages. D3.js is loaded from jsDelivr; an internet connection is needed unless D3 is provided locally.
 
@@ -22,21 +22,37 @@ Family Bubbles is a plain HTML, CSS and JavaScript genealogy scrapbook, hosted a
 
 **Refresh View:** If a new portrait or relationship line does not appear immediately, click **↻ Refresh View** below Delete Person in the information panel. The page reloads to display saved changes. Save any unsaved edits first.
 
+## Current photo workflow
+
+- **Add Photos** accepts one or more images. The newest becomes the main portrait, and previous photographic portraits stay in the album. Photos save automatically when added.
+- Up to eight album photos appear as smaller circular bubbles around each person. The person's name now sits below the lowest visible photo bubble with extra spacing, adjusting to bubble size and photo count.
+- Expand **Photographs** at the bottom of the panel for thumbnails of the current portrait and every album photo, including photos beyond the eight surrounding bubbles.
+- Select a thumbnail or surrounding photo bubble to open that photo full-screen. Use left/right buttons or arrow keys to browse, wrapping at either end. Close with **×** or **Escape**.
+- Supported raster uploads and imported photos are optimized to a maximum of 960 pixels on the longest side and converted to JPEG with a white background. Image bytes may therefore change during import.
+
 ## Help and reset
 
 Use the **?** button next to **Reset** in the top toolbar for the full instructions. The **Reset** button is the same function previously labeled “Reset Demo”: it restores the demo family after confirmation, replacing the current family stored in this browser. Export a backup first.
 
 ## Storage and backups
 
-Family information is stored in the browser's IndexedDB (with a localStorage fallback). Use **Export Family** to save a portable JSON backup containing people, relationships, notes and embedded images. Use **Import Family** to restore a backup. Browser storage is local to each browser/device, so export backups regularly.
+Family information is stored in the browser's IndexedDB (with a localStorage fallback). Use **Export Family** to save a portable JSON backup containing people, relationships, notes and embedded images. Use **Import Family** to restore a backup, replacing the family currently stored in this browser. Exports include main portraits and complete albums, including photographs beyond the eight surrounding bubbles. Import does not merge families. Browser storage is local to each browser/device, so export backups regularly.
 
 ## Testing status
 
-v36 renames Reset Demo to Reset and adds an instructions panel. v35 adds the information-panel Refresh View button to v34; v34 adds the Create Person panel action while retaining the working v33 navigation and sizing. JavaScript syntax and archive integrity are checked; visual interaction still requires a browser test.
+The user reports that the photo workflow works well. The latest name-spacing fix has passed JavaScript syntax and geometry checks for all three bubble sizes and zero through ten album photos, including the eight-satellite limit. Its visual appearance still needs a browser check. Earlier release packages had JavaScript syntax and archive integrity checks.
+
+## Latest update — Name spacing
+
+Names sit below the lowest visible surrounding photo bubble rather than just below the main portrait. People without surrounding photographs keep their previous label position.
+
+## v39 — Photograph optimization
+
+Raster uploads and imported photographs are optimized to a maximum of 960 pixels on the longest side for smaller backups and more responsive viewing.
 
 
 ## v37 — Additional photograph bubbles
-Open a person's panel and use **Add Photos** to attach one or more images without changing the original portrait. Up to eight additional images appear around the person's bubble at half its diameter. Every attached photograph is accessible from the thumbnail gallery in the side panel; select a thumbnail or satellite to enlarge it. Additional photos are embedded in JSON exports. This version does not merge JSON files or split the original portrait.
+This release introduced **Add Photos** and album photographs around each person. The v38 behavior below supersedes its original portrait-handling behavior. Up to eight additional images appear around the person's bubble at half its diameter. Every attached photograph is accessible from the thumbnail gallery in the side panel; select a thumbnail or satellite to enlarge it. Additional photos are embedded in JSON exports. This version does not merge JSON files or split the original portrait.
 
 ## v38 photo viewer
 
