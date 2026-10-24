@@ -75,7 +75,11 @@ function node(s){const d=s.datum(),clipId="portrait-clip-"+String(d.id).replace(
     n.select(".portrait-ring").attr("r",r);
     n.select("image").attr("x",-photoR).attr("y",-photoR).attr("width",2*photoR).attr("height",2*photoR).attr("href",d.photo||ph(d.name));
     defs.select("#portrait-clip-"+String(d.id).replace(/[^a-zA-Z0-9_-]/g,"")).select(".portrait-clip-circle").attr("r",photoR);
-    n.select("text").attr("dy",r+28).text(d.name||"Unnamed");
+    // Keep the name below the lowest visible album bubble, including its outline.
+    const small=r*.5,dist=r+small+7;
+    const photoBottom=extraPhotos(d).slice(0,8).reduce((bottom,src,i)=>
+      Math.max(bottom,Math.sin(-Math.PI/2+i*Math.PI/4)*dist+small+1.25),r);
+    n.select("text").attr("dy",photoBottom+28).text(d.name||"Unnamed");
     renderPhotoSatellites(n,d);
   });
   ls.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
